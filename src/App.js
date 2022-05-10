@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import CryptoInfo from "./components/CryptoInfo";
+import { Routes, Route } from "react-router-dom";
+import Coin from "./components/Coin";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Routes>
+                <Route path="/" element={<CryptoInfo />} />
+                <Route path="coins/:coin" element={<Coin />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
