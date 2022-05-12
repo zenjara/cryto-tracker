@@ -1,14 +1,12 @@
 import './App.css';
 import CryptoInfo from "./components/CryptoInfo";
-import { Routes, Route } from "react-router-dom";
-import Coin from "./components/Coin";
+import {Routes, Route} from "react-router-dom";
 
 function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path="/" element={<CryptoInfo />} />
-                <Route path="coins/:coin" element={<Coin />} />
+                <Route path="/" element={<CryptoInfo/>}/>
             </Routes>
         </div>
     );
