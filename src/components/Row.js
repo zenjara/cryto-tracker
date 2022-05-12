@@ -8,8 +8,6 @@ const extractColorClass = (value) => {
 }
 
 const Row = ({coin, isFavorite, onFavoriteClick}) => {
-    // const colorClass = coin.price_change_percentage_24h > 0 ? 'green' : 'red'
-
     return (
         <div className='row'>
             <div className='field small-field' onClick={() => onFavoriteClick(coin.name)}>
@@ -19,7 +17,7 @@ const Row = ({coin, isFavorite, onFavoriteClick}) => {
             </div>
             <div className='field small-field'>{coin.market_cap_rank}</div>
             <div className='field large-field left'>
-                <Link to={`/coins/${coin.id}`}>
+                {/*<Link to={`/coins/${coin.id}`}>*/}
                     <div className='coinName'>
                         <div className='coinImage'>
                             <img src={coin.image} alt={coin.name}
@@ -30,7 +28,7 @@ const Row = ({coin, isFavorite, onFavoriteClick}) => {
                         </div>
                         <div className='thin'>{coin.symbol.toUpperCase()}</div>
                     </div>
-                </Link>
+                {/*</Link>*/}
             </div>
             <div className='field large-field bolded'>{formatter.format(coin.current_price)}</div>
             {/*<div className={percentage24hClass}>{coin.price_change_percentage_24h.toFixed(2)}</div>*/}
